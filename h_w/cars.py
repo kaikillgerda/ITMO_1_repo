@@ -14,6 +14,9 @@ class Car:
     def year_assign(self):
         self.year = input('Введите год выпуска автомобиля: ')
 
+    def update_year(self, new): # Я РЕШИЛ НЕ СОВСЕМ ПРАВИЛЬНО!!! - ПРАВИЛЬНО - ВОТ ТАК
+        self.year = new         # Я РЕШИЛ НЕ СОВСЕМ ПРАВИЛЬНО!!! - ПРАВИЛЬНО - ВОТ ТАК
+
     def type_assign(self):
         self.type = input('Введите тип автомобиля: ')
 
@@ -24,11 +27,15 @@ class Car:
         print('Тип кузова: ' + self.type + '\n' + 'Год выпуска: ' + self.year + '\n' + 'Цвет: ' + self.color)
 
 
-vaz_2101 = Car()
-
+vaz_2101 = Car('синий', 'хэчбэк', '1959')
+vaz_2101.car_info()
 Car().start()
 Car().stop()
 vaz_2101.year_assign()
 vaz_2101.type_assign()
 vaz_2101.color_assign()
+vaz_2101.car_info()
+
+vaz_2101.update_year(1958)
+
 vaz_2101.car_info()
